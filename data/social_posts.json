@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mock_001",
+    "text": "Servono autobus più frequenti a Roma, soprattutto la sera.",
+    "created_at": "2026-10-14T08:30:00Z",
+    "source": "mock_x",
+    "url": null,
+    "topic": "public_transport"
+  },
+  {
+    "id": "mock_002",
+    "text": "La raccolta dei rifiuti nel mio quartiere dovrebbe essere più regolare.",
+    "created_at": "2026-10-14T09:15:00Z",
+    "source": "mock_x",
+    "url": null,
+    "topic": "waste_management"
+  },
+  {
+    "id": "mock_003",
+    "text": "Il Comune dovrebbe investire di più nella manutenzione delle strade.",
+    "created_at": "2026-10-14T10:00:00Z",
+    "source": "mock_x",
+    "url": null,
+    "topic": "public_services"
+  }
+]
