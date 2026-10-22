@@ -65,6 +65,11 @@ Create a `.env` file in the project root for API-backed collectors:
 ```dotenv
 YOUTUBE_API_KEY=your_youtube_api_key
 X_BEARER_TOKEN=your_x_bearer_token
+META_ACCESS_TOKEN=your_meta_access_token
+META_APP_SECRET=your_meta_app_secret
+META_GRAPH_API_VERSION=v22.0
+META_PAGE_ID=your_facebook_page_id
+INSTAGRAM_USER_ID=your_instagram_business_user_id
 ```
 
 Then run either collector:
@@ -72,6 +77,7 @@ Then run either collector:
 ```bash
 python youtube_collector.py
 python x_collector.py
+python meta_collector.py
 ```
 
 The YouTube collector writes `data/youtube_posts.json`. The X collector writes `data/x_posts.json` and retrieves recent posts from the X API. Keep API keys and bearer tokens out of source control.
@@ -100,6 +106,8 @@ rome-intelligence/
 The dashboard can also read these optional files when they are added to `data/`:
 
 - `social_posts.json`
+- `x_posts.json`
+- `meta_posts.json`
 - `youtube_posts.json`
 
 If those files are missing, the corresponding dashboard sections remain empty. The X collector currently writes `x_posts.json`; the dashboard provides links for searching public X posts rather than loading that file as a dashboard dataset.

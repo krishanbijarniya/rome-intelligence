@@ -1,0 +1,163 @@
+{
+  "project": "Rome City News Intelligence",
+  "description": "Candidate public Facebook Pages for Rome local news, civic affairs, politics and public services. Page IDs are intentionally blank and must be verified before API collection.",
+  "important_notes": [
+    "A listed public Page is not automatically accessible through the Meta Graph API.",
+    "For Pages you do not manage, request and obtain the applicable Meta Page Public Content Access feature/permissions before collecting their content.",
+    "Page IDs are intentionally left blank rather than guessed. Verify each Page ID through an approved API workflow or other reliable page details.",
+    "Use only data and engagement fields returned by Meta for your app and token. Likes/reactions and comments may be unavailable for some Pages/posts.",
+    "This file contains candidate sources, not a guarantee of current API access or approval."
+  ],
+  "sources": [
+    {
+      "name": "Roma Capitale",
+      "facebook_url": "https://www.facebook.com/RomaCapitaleOfficialPage/",
+      "page_id": "",
+      "category": [
+        "official_institution",
+        "politics",
+        "public_services"
+      ],
+      "municipio": "citywide",
+      "enabled": true,
+      "verification_note": "Official Facebook page linked from Roma Capitale materials."
+    },
+    {
+      "name": "ATAC S.p.A.",
+      "facebook_url": "https://www.facebook.com/AtacSpaRoma/",
+      "page_id": "",
+      "category": [
+        "public_transport",
+        "public_services"
+      ],
+      "municipio": "citywide",
+      "enabled": true,
+      "verification_note": "Facebook URL referenced in Roma-related institutional materials; verify current page before use."
+    },
+    {
+      "name": "Roma Servizi per la Mobilità",
+      "facebook_url": "https://www.facebook.com/romamobilita/",
+      "page_id": "",
+      "category": [
+        "public_transport",
+        "public_services"
+      ],
+      "municipio": "citywide",
+      "enabled": true,
+      "verification_note": "Facebook URL referenced in Roma-related institutional materials; verify current page before use."
+    },
+    {
+      "name": "Municipio Roma III Official",
+      "facebook_url": "https://www.facebook.com/MunicipioRomaIIIOfficialPage/",
+      "page_id": "",
+      "category": [
+        "municipal_politics",
+        "public_services",
+        "local_news"
+      ],
+      "municipio": "III",
+      "enabled": true,
+      "verification_note": "Linked by the official Roma Capitale website."
+    },
+    {
+      "name": "RomaToday",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "local_news",
+        "politics",
+        "public_safety",
+        "public_services"
+      ],
+      "municipio": "citywide",
+      "enabled": false,
+      "verification_note": "Find and verify the official Facebook Page via RomaToday's official website or Facebook search before enabling."
+    },
+    {
+      "name": "la Repubblica - Roma",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "local_news",
+        "politics"
+      ],
+      "municipio": "citywide",
+      "enabled": false,
+      "verification_note": "Find and verify the relevant official Facebook Page before enabling."
+    },
+    {
+      "name": "Corriere della Sera - Roma",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "local_news",
+        "politics"
+      ],
+      "municipio": "citywide",
+      "enabled": false,
+      "verification_note": "Find and verify the relevant official Facebook Page before enabling."
+    },
+    {
+      "name": "ANSA Roma & Lazio",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "news",
+        "politics",
+        "public_safety",
+        "public_services"
+      ],
+      "municipio": "Rome and Lazio",
+      "enabled": false,
+      "verification_note": "Find and verify the official regional Facebook Page before enabling."
+    },
+    {
+      "name": "Municipio Roma I",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "municipal_politics",
+        "public_services"
+      ],
+      "municipio": "I",
+      "enabled": false,
+      "verification_note": "Use the official Roma Capitale social-media directory to find the current Facebook page."
+    },
+    {
+      "name": "Municipio Roma II",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "municipal_politics",
+        "public_services"
+      ],
+      "municipio": "II",
+      "enabled": false,
+      "verification_note": "Use the official Roma Capitale social-media directory to find the current Facebook page."
+    },
+    {
+      "name": "Municipio Roma IV",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "municipal_politics",
+        "public_services"
+      ],
+      "municipio": "IV",
+      "enabled": false,
+      "verification_note": "Use the official Roma Capitale social-media directory to find the current Facebook page."
+    },
+    {
+      "name": "Municipio Roma V",
+      "facebook_url": "",
+      "page_id": "",
+      "category": [
+        "municipal_politics",
+        "public_services"
+      ],
+      "municipio": "V",
+      "enabled": false,
+      "verification_note": "Use the official Roma Capitale social-media directory to find the current Facebook page."
+    }
+  ]
+}

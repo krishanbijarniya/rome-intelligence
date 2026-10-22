@@ -53,6 +53,7 @@ def collect():
     records = {str(p["id"]): p for p in load_existing() if "id" in p}
     headers = {"Authorization": f"Bearer {token}"}
 
+    api_failed = False
     for query in QUERIES:
         params = {
             "query": query,
@@ -71,6 +72,7 @@ def collect():
             )
 
             if response.status_code != 200:
+                api_failed = True
                 print(
                     f"X API returned HTTP {response.status_code} "
                     f"for query {query!r}: {response.text[:300]}"
@@ -100,12 +102,12 @@ def collect():
         except (requests.RequestException, ValueError) as error:
             print(f"Request or response error: {error}")
 
+    if api_failed and not records:
+        print("X collection failed; keeping the existing output file unchanged.")
+        return
+
     OUTPUT.write_text(
-        json.dumps(
-            list(records.values()),
-            ensure_ascii=False,
-            indent=2,
-        ),
+        json.dumps(list(records.values()), ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 

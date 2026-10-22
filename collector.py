@@ -17,6 +17,7 @@ FEED_URL = (
 
 
 def collect_news():
+    
     DATA_DIR.mkdir(exist_ok=True)
 
     request = Request(
