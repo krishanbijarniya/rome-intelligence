@@ -1,4 +1,156 @@
-# Rome City Intelligence
+<!-- Rome City Intelligence · README -->
+<div align="center">
+
+<img width="100%" alt="Rome City Intelligence header" src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,45:1D4ED8,75:2563EB,100:06B6D4&height=230&section=header&text=Rome%20City%20Intelligence&fontSize=54&fontColor=FFFFFF&fontAlignY=40&desc=Civic%20News%20Monitoring%20%E2%80%A2%20Topic%20Classification%20%E2%80%A2%20Municipio%20Map%20%E2%80%A2%20Streamlit&descAlignY=68&descSize=17&animation=fadeIn"/>
+
+<br/>
+
+<img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+<img alt="Dashboard" src="https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+<img alt="Data" src="https://img.shields.io/badge/Data-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+<img alt="Charts" src="https://img.shields.io/badge/Charts-Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white"/>
+<img alt="Maps" src="https://img.shields.io/badge/Maps-Folium-77B829?style=for-the-badge&logo=leaflet&logoColor=white"/>
+
+<br/><br/>
+
+<a href="#-overview"><b>Overview</b></a> •
+<a href="#-architecture"><b>Architecture</b></a> •
+<a href="#-engineering-highlights"><b>Highlights</b></a> •
+<a href="#-quick-start"><b>Quick Start</b></a> •
+<a href="#-recruiter-snapshot"><b>Recruiter Snapshot</b></a> •
+<a href="#-contact"><b>Contact</b></a>
+
+</div>
+
+---
+
+# 🧭 Overview
+
+A **civic-intelligence dashboard** that monitors publicly available news and online content about **Rome's transport, public services, safety and local government**. Collectors run on a daily schedule, records are **classified into civic topics**, and the dashboard lets you search, filter and explore issues across **Rome's 15 municipi** on an interactive map.
+
+> 🚧 Under active development. Collection depends on each platform's API permissions and terms; counts are indicative, not a scientific poll.
+
+---
+
+# 🏗️ Architecture
+
+<details open>
+<summary><b>🧠 Collect → classify → explore (click to collapse)</b></summary>
+
+<br/>
+
+```mermaid
+flowchart LR
+  subgraph Sources
+    N["📰 Google News RSS"]
+    Y["▶️ YouTube API"]
+    X["𝕏 X API"]
+    M["📘 Meta Graph API"]
+  end
+  N & Y & X & M --> C["🧲 Collectors<br/>run_daily.sh"]
+  C --> J[("🗂️ JSON store<br/>data/*.json")]
+  J --> K["🏷️ Topic classifier<br/>transport · waste · housing<br/>safety · environment …"]
+  K --> D["📊 Streamlit dashboard"]
+  D --> T1["Overview"] & T2["News"] & T3["Social"] & T4["YouTube"] & T5["🗺️ Municipio map"]
+```
+
+</details>
+
+
+---
+
+# ⚙️ Engineering Highlights
+
+<details open>
+<summary><b>🏁 What it does well (click to collapse)</b></summary>
+
+<br/>
+
+<table>
+<tr>
+<td width="25%" valign="top">
+
+### 🧲 Multi-Source Ingestion
+Independent collectors for RSS, YouTube, X and Meta — each optional and failure-isolated.
+
+</td>
+<td width="25%" valign="top">
+
+### ⏱️ Scheduled Pipeline
+`run_daily.sh` refreshes and classifies data automatically, with logging.
+
+</td>
+<td width="25%" valign="top">
+
+### 🏷️ Civic Taxonomy
+8 issue categories assigned via rules when sources lack labels.
+
+</td>
+<td width="25%" valign="top">
+
+### 🗺️ Geo Exploration
+GeoJSON boundaries of the 15 municipi rendered with Folium inside Streamlit.
+
+</td>
+</tr>
+</table>
+
+</details>
+
+
+---
+
+# 🚀 Quick Start
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python collector.py && python classify_news.py
+streamlit run app.py
+```
+
+---
+
+# 🎯 Recruiter Snapshot
+
+<details open>
+<summary><b>📌 What to remember in 15 seconds (click to collapse)</b></summary>
+
+<br/>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### ✅ Demonstrated
+- Data collection from public APIs
+- Text classification
+- Geospatial visualisation
+- Automated data pipeline
+
+</td>
+<td width="50%" valign="top">
+
+### 🧠 Why it matters
+- Turns scattered news into civic signals
+- Responsible-data caveats built in
+- Extensible to new sources
+
+</td>
+</tr>
+</table>
+
+</details>
+
+
+---
+
+# 📚 Full Technical Documentation
+
+<details>
+<summary><b>🛠️ Setup, configuration, API reference and implementation details (click to expand)</b></summary>
+
+<br/>
 
 A Streamlit dashboard for monitoring publicly available news and online content about Rome's civic services, mobility, local government, and related issues.
 
@@ -126,3 +278,23 @@ News records may contain a `topic` or `category` field. When no category is supp
 - Other
 
 Keyword classification is approximate and should be manually verified before drawing conclusions. Collected article counts and online content do not represent a scientific poll or the views of Rome residents.
+
+</details>
+
+
+---
+
+# 📬 Contact
+
+<div align="center">
+
+**Krishan Kumar** — AI Engineer & Data Scientist · Rome, Italy
+
+<a href="https://www.linkedin.com/in/krishan-kumar-ml/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:krishbijarniya@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://krishan-kumar-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0F172A?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/></a>
+<a href="https://github.com/krishanbijarniya"><img src="https://img.shields.io/badge/More%20projects-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:1D4ED8,100:0F172A&height=120&section=footer" alt=""/>
